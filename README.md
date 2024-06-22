@@ -1,4 +1,4 @@
-# Pokedex
+# Pokémon API
 
 ## Overview
 
@@ -39,9 +39,18 @@ Ensure you have the following installed on your system:
    docker-compose up -d
    ```
 
+4. Clone the file ```.env.template``` and rename the copy to ```.env```.
+
+5. Fill in the environment variables defined in the ```.env```.
+
 6. Run the application in dev:
    ```
    npm run start:dev
+   ```
+
+7. Rebuild the database with seed
+   ```
+   http://localhost:3000/api/seed
    ```
 
 ## Technologies
