@@ -60,6 +60,13 @@ You can access the API documentation at the following endpoint:
 http://localhost:3000/api
 ```
 
+## Running the Tests
+
+Run the e2e tests:
+```bash
+   npm run test:e2e
+```
+
 ## Technologies
 
 - Nest.js
