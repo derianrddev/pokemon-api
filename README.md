@@ -72,3 +72,8 @@ Run the e2e tests:
 - Nest.js
 - MongoDB
 - Mongoose
+
+## Links
+
+- Solution URL: [Solution URL here](https://github.com/derianrddev/pokemon-api)
+- Live Site URL: [Live site URL here](https://pokemon-api-production-b559.up.railway.app/api)
