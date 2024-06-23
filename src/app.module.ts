@@ -11,7 +11,9 @@ import { SeedModule } from './seed/seed.module';
 @Module({
   imports: [
     ConfigModule.forRoot(), 
-    MongooseModule.forRoot(process.env.MONGODB), 
+    MongooseModule.forRoot(process.env.MONGO_URI, {
+      dbName: process.env.MONGO_DB_NAME
+    }), 
     PokemonModule, CommonModule, SeedModule,
   ],
   controllers: [AppController],
