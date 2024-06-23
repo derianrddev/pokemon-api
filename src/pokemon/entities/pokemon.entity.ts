@@ -25,6 +25,48 @@ export class Pokemon extends Document {
     index: true,
   })
   no: number;
+
+  @ApiProperty({ 
+    example: 'https://pokeapi.co/media/sprites/pokemon/25.png', 
+    description: 'The image URL of the Pokémon',
+    nullable: false
+  })
+  @Prop()
+  image: string;
+
+  @ApiProperty({ 
+    example: 4, 
+    description: 'The height of the Pokémon',
+    nullable: false
+  })
+  @Prop()
+  height: number;
+
+  @ApiProperty({ 
+    example: 60, 
+    description: 'The weight of the Pokémon',
+    nullable: false
+  })
+  @Prop()
+  weight: number;
+
+  @ApiProperty({ 
+    example: ['static', 'lightning-rod'], 
+    description: 'The abilities of the Pokémon',
+    isArray: true,
+    nullable: false
+  })
+  @Prop([String])
+  abilities: string[];
+
+  @ApiProperty({ 
+    example: ['electric'], 
+    description: 'The types of the Pokémon',
+    isArray: true,
+    nullable: false
+  })
+  @Prop([String])
+  types: string[];
 }
 
-export const PokemonSchema = SchemaFactory.createForClass( Pokemon );
+export const PokemonSchema = SchemaFactory.createForClass(Pokemon);

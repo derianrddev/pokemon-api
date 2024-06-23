@@ -53,6 +53,13 @@ Ensure you have the following installed on your system:
    http://localhost:3000/api/seed
    ```
 
+## API Documentation
+
+You can access the API documentation at the following endpoint:
+```
+http://localhost:3000/api
+```
+
 ## Technologies
 
 - Nest.js

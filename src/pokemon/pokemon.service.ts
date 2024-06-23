@@ -29,7 +29,7 @@ export class PokemonService {
   }
 
   findAll( paginationDto: PaginationDto ) {
-    const { limit = 10, offset = 0 } = paginationDto;
+    const { limit = 151, offset = 0 } = paginationDto;
 
     return this.pokemonModel.find()
       .limit( limit )
@@ -44,17 +44,17 @@ export class PokemonService {
     let pokemon: Pokemon;
 
     if ( !isNaN(+term) ) {
-      pokemon = await this.pokemonModel.findOne({ no: term });
+      pokemon = await this.pokemonModel.findOne({ no: term }).select('-__v');;
     }
 
     // MongoID
     if ( !pokemon && isValidObjectId( term ) ) {
-      pokemon = await this.pokemonModel.findById( term );
+      pokemon = await this.pokemonModel.findById( term ).select('-__v');;
     }
 
     // Name
     if ( !pokemon ) {
-      pokemon = await this.pokemonModel.findOne({ name: term.toLowerCase().trim() })
+      pokemon = await this.pokemonModel.findOne({ name: term.toLowerCase().trim() }).select('-__v');
     }
 
     if ( !pokemon ) 
